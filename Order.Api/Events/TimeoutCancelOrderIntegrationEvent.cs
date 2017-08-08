@@ -1,6 +1,6 @@
 ﻿using EventBus.Events;
 
-namespace UserNotifyService.Events
+namespace Order.Api.Events
 {
     public class TimeoutCancelOrderIntegrationEvent : IntegrationEvent
     {

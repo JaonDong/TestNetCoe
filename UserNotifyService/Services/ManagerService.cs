@@ -46,7 +46,7 @@ namespace TimeOutOrderService.Services
                 {
                     conn.Open();
                     orderIds = conn.Query<int>(
-                        @"SELECT Id FROM [OrderingDb].[ordering].[orders] 
+                        @"SELECT Id FROM [orders] 
                             WHERE DATEDIFF(minute, [OrderDate], GETDATE()) >= @GracePeriodTime
                             AND [OrderStatusId] = 1",
                         new { GracePeriodTime = _settings.GracePeriodTime });

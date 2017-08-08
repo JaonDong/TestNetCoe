@@ -30,6 +30,7 @@ namespace UserNotifyService
             var serviceProvider = ConfigureServices(services);
 
             var logger = serviceProvider.GetService<ILoggerFactory>();
+            
             Configure(logger);
 
             var gracePeriodManagerService = serviceProvider
